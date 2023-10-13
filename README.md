@@ -9,7 +9,7 @@ You should be able to view the Figma link below whether you are logged into a Fi
 you will not be able to view the local styles or available component variations/properties when you select one of our two demo components in 
 section 2 (see Figma art board screen capture).
 
-[Design System](https://www.figma.com/file/5R8kZDBSWYGCuwQjLox0oV/mockup-to-UI?type=design&node-id=0%3A1&mode=design&t=yAD7ujmGj3INbiV9-1)
+[See design system prototype live in Figma](https://www.figma.com/file/5R8kZDBSWYGCuwQjLox0oV/mockup-to-UI?type=design&node-id=0%3A1&mode=design&t=yAD7ujmGj3INbiV9-1)
 
 Figma art board screen capture - convey
 ![Figma artboard with details](/README_assets/component-prop-example.png)
