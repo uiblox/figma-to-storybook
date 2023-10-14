@@ -4,40 +4,26 @@ import { ReactNode } from 'react';
 interface ButtonProps {
     children?: ReactNode
     label?: string
+    size?: 'sm' | 'lg'
+    type?: 'secondary',
     handleClick: () => void
 }
 
 const useStyles = createUseStyles({
-    section: {
-        display: 'grid',
-        justifyContent: 'center',
-        justifyItems: 'center', 
-        gridGap: '20px',
-        gridTemplateColumns: 'repeat(auto-fit, minMax(100px, 1fr))',
-        margin: '0 auto',
-        marginBottom: '20px',
-        maxWidth: '1024px',
-    },
     btn: {
         background: '#E1FB3D',
         border: 'none',
         borderRadius: '4px',
         color: '#4D4C4C',
         cursor: 'pointer',
-        padding: '10px 8px',
+        padding: '8px 12px',
         transition: '0.4s ease',
         '&:hover': {
             background: '#ECF99B'
         },
-    },
-    'btn--secondary': {
-        background: 'transparent',
-        boxShadow: '0 0 0 1px #4D4C4C',
-        '&:hover': {
-            background: 'transparent',
-            boxShadow: '0 0 0 1px #E1FB3D',
-            color: '#E1FB3D',
-        },
+        '& $btn--sm': {},
+        '& $btn--lg': {},
+        '& $btn--secondary': {},
     },
     'btn-content': {
         whiteSpace: 'nowrap'
@@ -51,96 +37,36 @@ const useStyles = createUseStyles({
         textWrap: 'nowrap',
     },
     'btn--sm': {
-       fontSize: '10px'
+        fontSize: '10px',
+        padding: '4px 8px',
     },
     'btn--lg': {
-        fontSize: '18px'
+        fontSize: '18px',
+        padding: '12px 12px',
+    },
+    'btn--secondary': {
+        background: 'transparent',
+        boxShadow: '0 0 0 1px #4D4C4C',
+        '&:hover': {
+            background: 'transparent',
+            boxShadow: '0 0 0 1px #E1FB3D',
+            color: '#E1FB3D',
+        },
     },
   })
 
-export const Button:React.FC<ButtonProps> = ({handleClick, label, children}) => {
+export const Button:React.FC<ButtonProps> = ({children, label, size, type, handleClick}) => {
 
     const styles = useStyles()
 
     return (
         <>
-            <h1>Button components variations</h1>
-            <div className={styles.section}>
-                <button className={`${styles.btn} ${styles['btn--sm']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        {children}
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-
-                <button className={`${styles.btn}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        {children}
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-
-                <button className={`${styles.btn} ${styles['btn--lg']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        {children}
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-            </div>
-            <div className={styles.section}>
-                <button className={`${styles.btn} ${styles['btn--sm']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-                <button className={`${styles.btn}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-                <button className={`${styles.btn} ${styles['btn--lg']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-            </div>
-            <div className={styles.section}>
-                <button className={`${styles.btn} ${styles['btn--secondary']} ${styles['btn--sm']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        {children}
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-                <button className={`${styles.btn} ${styles['btn--secondary']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        {children}
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-                <button className={`${styles.btn} ${styles['btn--secondary']} ${styles['btn--lg']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        {children}
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-            </div>
-            <div className={styles.section}>
-                <button className={`${styles.btn} ${styles['btn--secondary']} ${styles['btn--sm']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-                <button className={`${styles.btn} ${styles['btn--secondary']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-                <button className={`${styles.btn} ${styles['btn--secondary']} ${styles['btn--lg']}`} onClick={() => handleClick()}>
-                    <span className={styles['btn-content']}>
-                        <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                    </span>
-                </button>
-            </div>
+            <button className={`${styles.btn} ${size ? styles[`btn--${size}`] : ''} ${type ? styles[`btn--${type}`] : ''}`} onClick={() => handleClick()}>
+                <span className={styles['btn-content']}>
+                    {children}
+                    <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
+                </span>
+            </button>
         </>
     )
 }
