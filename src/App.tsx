@@ -1,7 +1,8 @@
-import { Button } from './components/button/Button'
 import { InfoCircleOutlined } from '@ant-design/icons';
-import { createUseStyles } from 'react-jss'
+import { Button } from './components/button/Button'
+import { Card } from './components/card/Card';
 import { useStyles } from './css/global'
+
 
 
 function App() {
@@ -46,7 +47,12 @@ function App() {
         <Button handleClick={handleClick} label="Learn more" type='secondary'></Button>
         <Button handleClick={handleClick} label="Learn more" size='lg' type='secondary'></Button>
       </div>
-      
+      <div className={styles.section}>
+        <Card msg='Card description goes here'/>
+        <Card label='Success' msg='Card description goes here' type='success'/>
+        <Card label='Warning' msg='Card description goes here' type='warn'/>
+        <Card label='Error' msg='Card description goes here' type='error'/>
+      </div>
     </>
   )
 }

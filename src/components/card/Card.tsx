@@ -1,0 +1,80 @@
+import { createUseStyles } from 'react-jss'
+import { Button } from '../button/Button'
+import { CheckCircleOutlined, CloseCircleOutlined, InfoCircleOutlined, WarningOutlined } from '@ant-design/icons';
+
+interface CardProps {
+    label?: string
+    msg: string
+    type?: 'warn' | 'error' | 'success'
+}
+
+const useStyles = createUseStyles({
+    card: {
+        color: '#FFF',
+        background: '#000',
+        borderRadius: '4px',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: '20px 24px',
+        textAlign: 'center',
+        width: '124px',
+        '&$card--success':{},
+        '&$card--warn':{},
+        '&$card--error':{},
+    },
+    'card--success': {
+        color: 'green',
+    },
+    'card--warn': {
+        color: 'yellow',
+    },
+    'card--error': {
+        color: 'red',
+    },
+    cardIcon: {
+        fontSize: '28px',
+        marginBottom: '8px',
+    },
+    cardTitle: {
+        fontSize: '18px',
+        margin: 0,
+    },
+    cardContent:  {
+        color: '#FFF',
+        fontSize: '14px',
+    }
+})
+
+export const Card:React.FC<CardProps> = ({label, msg, type}) => {
+    
+    const styles = useStyles()
+
+    const icon = () => {
+        switch (type) {
+            case 'warn':
+                return <WarningOutlined />
+            case 'error':
+                return <CloseCircleOutlined />
+            case 'success':
+                return <CheckCircleOutlined />
+            default:
+                return <InfoCircleOutlined />
+        }
+    }
+    
+    return (
+        <div className={`${type ? `${styles.card} ${styles[`card--${type}`]}` : styles.card}`} >
+            <div>
+                <div className={styles.cardIcon}>
+                    {icon()}
+                </div>
+                <h2 className={styles.cardTitle}>{label && label || 'Default Title'}</h2>
+            </div>
+            <div className={styles.cardContent}>
+                <p>{msg}</p>
+            </div>
+            <Button handleClick={() => console.log('clicked')} label='Confirm Option'/>
+        </div>
+    )
+}
