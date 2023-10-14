@@ -76,7 +76,7 @@ export const Card:React.FC<CardProps> = ({label, msg, type}) => {
             <div className={styles.cardContent}>
                 <p>{msg}</p>
             </div>
-            <Button handleClick={() => console.log('clicked')} label='Confirm Option'/>
+            <Button handleClick={() => console.log('clicked')} label='Confirm'/>
         </div>
     )
 }
