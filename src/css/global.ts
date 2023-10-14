@@ -3,6 +3,7 @@ import { createUseStyles } from 'react-jss'
 export const useStyles = createUseStyles({
     root: {
         fontSize: '16px',
+        fontFamily: 'Montserrat, sans-serif'
     },
     section: {
         alignItems: 'center',

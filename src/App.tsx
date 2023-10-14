@@ -3,8 +3,6 @@ import { Button } from './components/button/Button'
 import { Card } from './components/card/Card';
 import { useStyles } from './css/global'
 
-
-
 function App() {
 
   const handleClick = () => {

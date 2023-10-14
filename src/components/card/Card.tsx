@@ -10,8 +10,8 @@ interface CardProps {
 
 const useStyles = createUseStyles({
     card: {
-        color: '#FFF',
-        background: '#000',
+        color: '#EFEFEF',
+        background: '#353535',
         borderRadius: '4px',
         display: 'flex',
         flexDirection: 'column',
@@ -19,18 +19,19 @@ const useStyles = createUseStyles({
         padding: '20px 24px',
         textAlign: 'center',
         width: '124px',
+        fontFamily: 'Montserrat, sans-serif',
         '&$card--success':{},
         '&$card--warn':{},
         '&$card--error':{},
     },
     'card--success': {
-        color: 'green',
+        color: '#BEF93F',
     },
     'card--warn': {
-        color: 'yellow',
+        color: '#F9E73F',
     },
     'card--error': {
-        color: 'red',
+        color: '#F96C3F',
     },
     cardIcon: {
         fontSize: '28px',
@@ -38,6 +39,7 @@ const useStyles = createUseStyles({
     },
     cardTitle: {
         fontSize: '18px',
+        fontWeight: '400',
         margin: 0,
     },
     cardContent:  {
