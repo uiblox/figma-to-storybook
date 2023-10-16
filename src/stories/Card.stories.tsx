@@ -10,7 +10,7 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
-        // onClick: {action: 'clicked'},
+        handleCardConfirmClick: {action: 'Confirm card button selected'},
         label: { control: 'Card Title' },
         msg: { control: 'Card Message' },
         type: { control: 'Card type' },
@@ -33,7 +33,6 @@ const meta = {
       label: 'Success',
       msg: 'informative message.',
       type: 'success',
-      // onClick: action('Secondary button onclick behaves differently secondary')
     },
   };
 
