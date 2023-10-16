@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-const meta = {
+const meta: Meta<typeof Button> = {
   title: 'Example/Button',
   component: Button,
   parameters: {
@@ -18,7 +18,7 @@ const meta = {
     onClick: {action: 'clicked'},
     backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof Button>;
+} 
 
 export default meta;
 type Story = StoryObj<typeof meta>;

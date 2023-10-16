@@ -6,6 +6,7 @@ interface CardProps {
     label?: string
     msg: string
     type?: 'warn' | 'error' | 'success'
+    handleCardConfirmClick: () => void
 }
 
 const useStyles = createUseStyles({
@@ -48,7 +49,7 @@ const useStyles = createUseStyles({
     }
 })
 
-export const Card:React.FC<CardProps> = ({label, msg, type}) => {
+export const Card:React.FC<CardProps> = ({label, msg, type, handleCardConfirmClick}) => {
     
     const styles = useStyles()
 
@@ -76,7 +77,7 @@ export const Card:React.FC<CardProps> = ({label, msg, type}) => {
             <div className={styles.cardContent}>
                 <p>{msg}</p>
             </div>
-            <Button handleClick={() => console.log('clicked')} label='Confirm'/>
+            <Button handleClick={()=> handleCardConfirmClick()} label='Confirm'/>
         </div>
     )
 }

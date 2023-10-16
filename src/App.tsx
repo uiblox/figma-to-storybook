@@ -9,6 +9,10 @@ function App() {
     console.log('clicked')
   }
 
+  const handleCardConfirmClick = () => {
+    console.log('Some function passed from the parent - card confirm click confirmed.')
+  }
+
   const styles = useStyles()
 
   return (
@@ -46,10 +50,10 @@ function App() {
         <Button handleClick={handleClick} label="Learn more" size='lg' type='secondary'></Button>
       </div>
       <div className={styles.section}>
-        <Card msg='Card description goes here'/>
-        <Card label='Success' msg='Card description goes here' type='success'/>
-        <Card label='Warning' msg='Card description goes here' type='warn'/>
-        <Card label='Error' msg='Card description goes here' type='error'/>
+        <Card msg='Card description goes here' handleCardConfirmClick={handleCardConfirmClick} />
+        <Card label='Success' msg='Card description goes here' type='success' handleCardConfirmClick={handleCardConfirmClick}/>
+        <Card label='Warning' msg='Card description goes here' type='warn' handleCardConfirmClick={handleCardConfirmClick}/>
+        <Card label='Error' msg='Card description goes here' type='error' handleCardConfirmClick={handleCardConfirmClick}/>
       </div>
     </>
   )

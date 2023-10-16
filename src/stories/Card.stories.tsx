@@ -1,5 +1,5 @@
 import type { Meta, StoryObj, } from '@storybook/react';
-
+import { action } from '@storybook/addon-actions'
 import { Card } from '../components/card/Card';
 
 const meta = {
@@ -10,6 +10,7 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
+        // onClick: {action: 'clicked'},
         label: { control: 'Card Title' },
         msg: { control: 'Card Message' },
         type: { control: 'Card type' },
@@ -31,7 +32,8 @@ const meta = {
     args: {
       label: 'Success',
       msg: 'informative message.',
-      type: 'success'
+      type: 'success',
+      // onClick: action('Secondary button onclick behaves differently secondary')
     },
   };
 
