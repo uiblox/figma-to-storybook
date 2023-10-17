@@ -26,7 +26,9 @@
     "eject": "react-scripts eject",
     "format": "prettier 'src/' --write --config ./.prettierrc",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "predeploy": "npm run build-storybook",
+    "deploy-storybook": "gh-pages -d storybook-static"
   },
   "browserslist": {
     "production": [
