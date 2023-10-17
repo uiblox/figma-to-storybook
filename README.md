@@ -15,6 +15,7 @@ Figma art board screen capture - convey
 ![Figma artboard with details](/README_assets/component-prop-example.png)
 
 
-## Project Status
+## Live Storybook illustrating demo components
 
-wip
+View Button and Card components in storybook to explore the variations.
+[See live storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-button--docs)
