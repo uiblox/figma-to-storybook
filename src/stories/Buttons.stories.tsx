@@ -1,7 +1,8 @@
-import React from 'react'
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from '../components/button/Button'
 import { InfoCircleOutlined } from '@ant-design/icons';
+import type { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
+import React from "react";
 
 const meta: Meta<typeof Button> = {
     title: 'Components/Button',
@@ -12,15 +13,25 @@ const meta: Meta<typeof Button> = {
     tags: ['autodocs'],
     argTypes: {
         handleClick: {action: 'Button has been clicked'},
+        children: {
+            control: { type: 'boolean' },
+            options: ['true', 'false'],
+            mapping: {
+                true: <InfoCircleOutlined />,
+                false: '',
+            }
+        }
     }
 }
+
+
 
 export default meta;
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
     args: {
-        label: 'Default Button'
+        label: 'Default Button',
     }
 }
 
