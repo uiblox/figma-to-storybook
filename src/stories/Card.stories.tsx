@@ -11,9 +11,6 @@ const meta = {
     tags: ['autodocs'],
     argTypes: {
         handleCardConfirmClick: {action: 'Confirm card button selected'},
-        label: { control: 'Card Title' },
-        msg: { control: 'Card Message' },
-        type: { control: 'Card type' },
     },
   } satisfies Meta<typeof Card>;
   
