@@ -20,7 +20,7 @@ const useStyles = createUseStyles({
         padding: '20px 24px',
         textAlign: 'center',
         width: '124px',
-        fontFamily: 'Montserrat, sans-serif',
+        // fontFamily: 'Montserrat, sans-serif',
         '&$card--success':{},
         '&$card--warn':{},
         '&$card--error':{},

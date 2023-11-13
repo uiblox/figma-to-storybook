@@ -2,6 +2,7 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import { Button } from './components/button/Button'
 import { Card } from './components/card/Card';
 import { useStyles } from './css/global'
+import { Tile } from './components/tile/Tile';
 
 function App() {
 
@@ -18,7 +19,10 @@ function App() {
   return (
     <>
       <div className={styles.section}>
-        <Button handleClick={handleClick} label="Learn more" size='sm'>
+       <Tile />
+      </div>
+      {/* <div className={styles.section}>
+      <Button handleClick={handleClick} label="Learn more" size='sm'>
           <InfoCircleOutlined/>
         </Button>
         <Button handleClick={handleClick} label="Learn more">
@@ -27,13 +31,11 @@ function App() {
         <Button handleClick={handleClick} label="Learn more" size='lg'>
           <InfoCircleOutlined/>
         </Button>
-      </div>
-      <div className={styles.section}>
         <Button handleClick={handleClick} label="Learn more" size='sm'></Button>
         <Button handleClick={handleClick} label="Learn more"></Button>
         <Button handleClick={handleClick} label="Learn more" size='lg'></Button>
-      </div>
-      <div className={styles.section}>
+      </div> */}
+      {/* <div className={styles.section}>
         <Button handleClick={handleClick} label="Learn more" size='sm' type='secondary'>
           <InfoCircleOutlined/>
         </Button>
@@ -43,18 +45,18 @@ function App() {
         <Button handleClick={handleClick} label="Learn more" size='lg' type='secondary'>
           <InfoCircleOutlined/>
         </Button>
-      </div>
-      <div className={styles.section}>
+      </div> */}
+      {/* <div className={styles.section}>
         <Button handleClick={handleClick} label="Learn more" size='sm' type='secondary'></Button>
         <Button handleClick={handleClick} label="Learn more" type='secondary'></Button>
         <Button handleClick={handleClick} label="Learn more" size='lg' type='secondary'></Button>
-      </div>
-      <div className={styles.section}>
+      </div> */}
+      {/* <div className={styles.section}>
         <Card msg='Card description goes here' handleCardConfirmClick={handleCardConfirmClick} />
         <Card label='Success' msg='Card description goes here' type='success' handleCardConfirmClick={handleCardConfirmClick}/>
         <Card label='Warning' msg='Card description goes here' type='warn' handleCardConfirmClick={handleCardConfirmClick}/>
         <Card label='Error' msg='Card description goes here' type='error' handleCardConfirmClick={handleCardConfirmClick}/>
-      </div>
+      </div> */}
     </>
   )
 }

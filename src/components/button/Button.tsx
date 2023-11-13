@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
         borderRadius: '4px',
         color: '#4D4C4C',
         cursor: 'pointer',
-        fontFamily: 'Montserrat, sans-serif',
+        // fontFamily: 'Montserrat, sans-serif',
         padding: '8px 12px',
         transition: '0.4s ease',
         '&:hover': {

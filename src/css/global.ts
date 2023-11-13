@@ -2,18 +2,17 @@ import { createUseStyles } from 'react-jss'
 
 export const useStyles = createUseStyles({
     root: {
-        fontSize: '16px',
-        fontFamily: 'Montserrat, sans-serif'
+        fontFamily: 'Josefin Sans, sans-serif',
     },
     section: {
         alignItems: 'center',
-        display: 'grid',
-        justifyContent: 'center',
-        justifyItems: 'center', 
+        border: '1px solid #000',
+        display: 'grid', 
         gridGap: '20px',
         gridTemplateColumns: 'repeat(auto-fit, minMax(150px, 1fr))',
         margin: '0 auto',
         marginBottom: '20px',
-        maxWidth: '1024px',
+        maxWidth: '1200px',
+       
     }
 })
