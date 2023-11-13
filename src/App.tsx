@@ -3,6 +3,7 @@ import { Button } from './components/button/Button'
 import { Card } from './components/card/Card';
 import { useStyles } from './css/global'
 import { Tile } from './components/tile/Tile';
+import { TileGroup } from './components/tileGroup/TileGroup';
 
 function App() {
 
@@ -20,6 +21,9 @@ function App() {
     <>
       <div className={styles.section}>
        <Tile />
+      </div>
+      <div className={styles.section}>
+        <TileGroup />
       </div>
       {/* <div className={styles.section}>
       <Button handleClick={handleClick} label="Learn more" size='sm'>

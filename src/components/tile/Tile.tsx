@@ -9,7 +9,8 @@ const useStyles = createUseStyles({
         fontSize: '32px',
         height: '292px',
         padding: '12px',
-        width: '272px',
+        maxWidth: '272px',
+        
     },
     tileHeading: {
         fontSize: '28px',
@@ -29,11 +30,9 @@ export const Tile = () => {
     const styles = useStyles()
 
     return (
-        <>
-            <div className={styles.tileContainer}>
-                <h2 className={styles.tileHeading}>Lorem ipsum dolor sit amet.</h2>
-                <p className={styles.tileBody}>As a developer maintaining these specifications and improving them overtime can be an unwieldy task.</p>
-            </div>
-        </>
+        <div className={styles.tileContainer}>
+            <h2 className={styles.tileHeading}>Lorem ipsum dolor sit amet.</h2>
+            <p className={styles.tileBody}>As a developer maintaining these specifications and improving them overtime can be an unwieldy task.</p>
+        </div>
     )
 }
