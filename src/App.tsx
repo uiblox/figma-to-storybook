@@ -4,6 +4,7 @@ import { Card } from './components/card/Card';
 import { useStyles } from './css/global'
 import { Tile } from './components/tile/Tile';
 import { TileGroup } from './components/tileGroup/TileGroup';
+import { TextHero } from './components/textHero/TextHero';
 
 function App() {
 
@@ -24,6 +25,9 @@ function App() {
       </div>
       <div className={styles.section}>
         <TileGroup />
+      </div>
+      <div className={styles.section}>
+        <TextHero />
       </div>
       {/* <div className={styles.section}>
       <Button handleClick={handleClick} label="Learn more" size='sm'>

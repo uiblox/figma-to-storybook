@@ -2,9 +2,10 @@ import { createUseStyles } from 'react-jss'
 
 const useStyles = createUseStyles({
     tileContainer: {
-        background: '#D9D9D9',
+        background: '#333439',
         boxSizing: 'border-box',
         borderRadius: '4px',
+        color: '#FAFAFA',
         fontFamily: 'Josefin Sans, sans-serif',
         fontSize: '32px',
         height: '292px',
