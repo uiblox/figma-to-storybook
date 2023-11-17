@@ -3,7 +3,7 @@ import { Button } from './components/button/Button'
 import { CardOld } from './components/cardold/CardOld';
 import { useStyles } from './css/global'
 import { Card } from './components/Card/Card';
-import { TileGroup } from './components/tileGroup/TileGroup';
+import { EditorialCardGroup } from './components/editorialCardGroup/EditorialCardGroup';
 import { TextHero } from './components/textHero/TextHero';
 import { AlarmTile } from './components/alarmTile/AlarmTile';
 
@@ -25,7 +25,7 @@ function App() {
        <Card />
       </div>
       <div className={styles.section}>
-        <TileGroup />
+        <EditorialCardGroup />
       </div>
       <div className={styles.section}>
         <TextHero />
