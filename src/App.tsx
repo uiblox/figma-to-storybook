@@ -1,10 +1,11 @@
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Button } from './components/button/Button'
-import { Card } from './components/card/Card';
+import { CardOld } from './components/cardold/CardOld';
 import { useStyles } from './css/global'
-import { Tile } from './components/tile/Tile';
+import { Card } from './components/Card/Card';
 import { TileGroup } from './components/tileGroup/TileGroup';
 import { TextHero } from './components/textHero/TextHero';
+import { AlarmTile } from './components/alarmTile/AlarmTile';
 
 function App() {
 
@@ -21,13 +22,16 @@ function App() {
   return (
     <>
       <div className={styles.section}>
-       <Tile />
+       <Card />
       </div>
       <div className={styles.section}>
         <TileGroup />
       </div>
       <div className={styles.section}>
         <TextHero />
+      </div>
+      <div className={styles.section}>
+        <AlarmTile msg='Card description goes here' handleCardConfirmClick={handleCardConfirmClick}/>
       </div>
       {/* <div className={styles.section}>
       <Button handleClick={handleClick} label="Learn more" size='sm'>
