@@ -1,9 +1,12 @@
 import { createUseStyles } from 'react-jss'
-import { EditorialGroup } from '../editorialGroup/EditorialGroup'
+
+interface CardsProps {
+    children?: React.ReactNode
+    color?: string
+}
 
 const useStyles = createUseStyles({
     'card-container': {
-        background: '#333439',
         borderRadius: '4px',
         boxSizing: 'border-box',
         color: '#FAFAFA',
@@ -15,12 +18,12 @@ const useStyles = createUseStyles({
     },
 })
 
-export const Card = () => {
+export const Card: React.FC<CardsProps> = ({color, children}) => {
     const styles = useStyles()
 
     return (
-        <div className={styles['card-container']}>
-            <EditorialGroup />
+        <div className={styles['card-container']} style={{background: `${color ? color : '#333439'}`}}>
+           {children}
         </div>
     )
 }
