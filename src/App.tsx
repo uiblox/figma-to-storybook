@@ -2,10 +2,10 @@ import { InfoCircleOutlined } from '@ant-design/icons';
 import { Button } from './components/button/Button'
 import { CardOld } from './components/cardold/CardOld';
 import { useStyles } from './css/global'
-import { Card } from './components/Card/Card';
+import { EditorialCard } from './components/editorialCard/EditorialCard';
 import { EditorialCardGroup } from './components/editorialCardGroup/EditorialCardGroup';
-import { TextHero } from './components/textHero/TextHero';
-import { AlarmTile } from './components/alarmTile/AlarmTile';
+import { HeroEditorial } from './components/heroEditorial/HeroEditorial';
+// import { AlarmTile } from './components/alarmTile/AlarmTile';
 
 function App() {
 
@@ -22,16 +22,19 @@ function App() {
   return (
     <>
       <div className={styles.section}>
-       <Card />
+       <EditorialCard />
       </div>
       <div className={styles.section}>
         <EditorialCardGroup />
       </div>
       <div className={styles.section}>
-        <TextHero />
+        <HeroEditorial/>
       </div>
       <div className={styles.section}>
-        <AlarmTile msg='Card description goes here' handleCardConfirmClick={handleCardConfirmClick}/>
+        <HeroEditorial reverse={true}/>
+      </div>
+      <div className={styles.section}>
+        {/* <AlarmTile msg='Card description goes here' handleCardConfirmClick={handleCardConfirmClick}/> */}
       </div>
       {/* <div className={styles.section}>
       <Button handleClick={handleClick} label="Learn more" size='sm'>
