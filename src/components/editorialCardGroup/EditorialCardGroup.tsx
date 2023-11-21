@@ -1,4 +1,4 @@
-import { Card } from "../Card/Card"
+import { EditorialCard } from "../editorialCard/EditorialCard"
 import { createUseStyles } from "react-jss"
 
 const useStyles = createUseStyles({
@@ -39,10 +39,10 @@ export const EditorialCardGroup = () => {
     
     return (
         <div className={styles['editorial-card-group']}>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <EditorialCard />
+            <EditorialCard />
+            <EditorialCard />
+            <EditorialCard />
         </div>
     )
 }
