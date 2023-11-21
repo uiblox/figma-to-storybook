@@ -1,6 +1,9 @@
 import { createUseStyles } from 'react-jss'
 
 export const useStyles = createUseStyles({
+    '*': {
+        boxSizing: 'border-box',
+    },
     root: {
         fontFamily: 'Josefin Sans, sans-serif',
         '--main-bg-color': 'brown'

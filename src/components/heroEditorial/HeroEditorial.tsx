@@ -6,6 +6,7 @@ interface HeroEditorialProps {
 
 const useStyles = createUseStyles({
         heroContainer: {
+            boxSizing: 'border-box',
             display: 'flex',
             flexWrap: 'wrap',
             fontFamily: 'Josefin Sans',
@@ -17,26 +18,31 @@ const useStyles = createUseStyles({
         },
         heroBlockLeft: {
             backgroundColor: '#F5F5F5',
+            boxSizing: 'border-box',
             padding: '92px 74px',
-            width: '100%',
             '@media (min-width: 576px)': {
                 width: '370px'
             }
         },
         heroBlockRight: {
             backgroundColor: '#FAD32F',
+            boxSizing: 'border-box',
             padding: '14px 0',
-            flex: 1,
+            '@media (min-width: 576px)': {
+                flex: 1
+            }
         },
         heroContentLeft: {
-            width: '240px',
             '& h2': {
                 fontSize: '28px',
                 margin: 0,
             }
         },
         heroContentRight: {
-            padding: '0 72px',
+            padding: '0 12px',
+            '@media (min-width: 758px)': {
+                padding: '0 72px',
+            },
             '& h3': {
                 fontSize: '10px',
                 fontWeight: 400,
@@ -48,8 +54,10 @@ const useStyles = createUseStyles({
                 width: '30%',
             },
             '& p': {
+                display: 'inline-block',
                 fontSize: '14px',
                 fontWeight: 100,
+                lineHeight: '16px',
                 width: '100%',
                 '@media (min-width: 758px)': {
                     width: '270px',
@@ -72,7 +80,9 @@ export const HeroEditorial: React.FC<HeroEditorialProps> = ({reverse}) => {
                 <div className={styles.heroContentRight}>
                     <h3>LOREM</h3>
                     <h2>Lorem ipsum dolor sit amet</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus eu justo vitae rhoncus. Vivamus semper et nulla a suscipit. In eget dapibus sem, ornare rhoncus diam. Maecenas pharetra dictum dolor ut sagittis.</p>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce faucibus eu justo vitae rhoncus. Vivamus semper et nulla a suscipit. In eget dapibus sem, ornare rhoncus diam. Maecenas pharetra dictum dolor ut sagittis.</p>
+                    </div>
                 </div>
             </div>
         </div>
