@@ -4,69 +4,67 @@ import { ReactNode } from 'react';
 interface ButtonProps {
     children?: ReactNode
     label?: string
-    size?: 'sm' | 'lg'
+    mode?: 'light'
     type?: 'secondary',
     handleClick: () => void
 }
 
 const useStyles = createUseStyles({
-    btn: {
-        background: '#E1FB3D',
-        border: 'none',
+    'button': {
+        background: 'transparent',
+        border: '1.5px solid',
         borderRadius: '4px',
-        color: '#4D4C4C',
+        color: '#333439',
         cursor: 'pointer',
+        fontSize: '14px',
         padding: '8px 12px',
         transition: '0.4s ease',
         '&:hover': {
-            background: '#ECF99B'
+            background: '#1523CB',
+            color: '#FAFAFA'
         },
-        '& $btn--sm': {},
-        '& $btn--lg': {},
-        '& $btn--secondary': {},
+        '& $button--secondary': {},
+        '& $button--light': {},
     },
-    'btn-content': {
+    'button-content': {
         whiteSpace: 'nowrap'
     },
-    'btn-text': {
+    'button--secondary': {
+        background: 'transparent !important',
+        border: 'none',
+        borderRadius: 0,
+        '&:hover': {
+            boxShadow: '0 3px 0 0 #333439',
+            color: '#333439',
+        },
+    },
+    'button--light': {
+        color: '#FAFAFA',
+        '&:hover': {
+            boxShadow: '0 3px 0 0 #FAFAFA',
+            color: '#FAFAFA'
+        },
+    },
+    'button-text': {
         paddingLeft: 0,
         textWrap: 'nowrap',
     },
-    'btn-text-icon': {
+    'button-text-icon': {
         paddingLeft: '4px',
         textWrap: 'nowrap',
     },
-    'btn--sm': {
-        fontSize: '10px',
-        padding: '4px 8px',
-    },
-    'btn--lg': {
-        fontSize: '18px',
-        padding: '12px 12px',
-    },
-    'btn--secondary': {
-        background: 'transparent',
-        boxShadow: '0 0 0 1px #4D4C4C',
-        '&:hover': {
-            background: 'transparent',
-            boxShadow: '0 0 0 1px #E1FB3D',
-            color: '#E1FB3D',
-        },
-    },
   })
 
-export const Button:React.FC<ButtonProps> = ({children, label, size, type, handleClick}) => {
+export const Button:React.FC<ButtonProps> = ({children, mode, label, type, handleClick}) => {
 
     const styles = useStyles()
 
     return (
-        <>
-            <button className={`${styles.btn} ${size ? styles[`btn--${size}`] : ''} ${type ? styles[`btn--${type}`] : ''}`} onClick={() => handleClick()}>
-                <span className={styles['btn-content']}>
-                    {children}
-                    <span className={children ? styles['btn-text-icon'] : styles['btn-text'] }>{label}</span>
-                </span>
-            </button>
-        </>
+        <button className={`${styles.button} ${type ? styles[`button--${type}`] : ''} ${mode ? styles[`button--${mode}`] : ''}`} onClick={() => handleClick()}>
+            <span className={styles['button-content']}>
+                {children}
+                <span className={children ? styles['button-text-icon'] : styles['button-text'] }>{label}</span>
+            </span>
+        </button>
     )
 }

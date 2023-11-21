@@ -3,6 +3,7 @@ import { createUseStyles } from "react-jss"
 const useStyles = createUseStyles({
     'editorialHeading': {
         fontFamily: 'Josefin Sans, sans-serif',
+        color: '#FAFAFA',
     },
     'editorialHeadingTitle': {
         fontSize: '28px',
