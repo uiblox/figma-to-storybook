@@ -35,39 +35,52 @@ export const Default: Story = {
     }
 }
 
-export const Small: Story = {
-    args: {
-        label: 'small Button',
-        size: 'sm'
-    }
-}
-
-export const Large: Story = {
-    args: {
-        label: 'Large Button',
-        size: 'lg'
-    }
-}
-
-export const DefaultSecondary: Story = {
-    args: {
-        label: 'Default secondary',
-        type: 'secondary'
-    }
-}
-
-export const SmallSecondary: Story = {
-    args: {
-        label: 'Small secondary',
-        size: 'sm',
-        type: 'secondary',
+export const Light: Story = {
+    parameters: {
+        backgrounds: { default: 'dark'}
     },
+    args: {
+        label: 'Light Button',
+        mode: 'light'
+    }
 }
 
-export const LargeSecondary: Story = {
+export const Secondary: Story = {
     args: {
-        label: 'Large secondary',
-        size: 'lg',
+        label: 'Secondary Button',
         type: 'secondary'
     }
 }
+export const SecondaryLight: Story = {
+    parameters: {
+        backgrounds: { default: 'dark'}
+    },
+    args: {
+        label: 'Secondary Light Button',
+        type: 'secondary',
+        mode: 'light'
+    }
+}
+
+// export const DefaultSecondary: Story = {
+//     args: {
+//         label: 'Default secondary',
+//         type: 'secondary'
+//     }
+// }
+
+// export const SmallSecondary: Story = {
+//     args: {
+//         label: 'Small secondary',
+//         size: 'sm',
+//         type: 'secondary',
+//     },
+// }
+
+// export const LargeSecondary: Story = {
+//     args: {
+//         label: 'Large secondary',
+//         size: 'lg',
+//         type: 'secondary'
+//     }
+// }

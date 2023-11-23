@@ -5,7 +5,7 @@ interface ButtonProps {
     children?: ReactNode
     label?: string
     mode?: 'light'
-    type?: 'secondary',
+    type?: 'secondary'
     handleClick: () => void
 }
 
@@ -21,6 +21,7 @@ const useStyles = createUseStyles({
         transition: '0.4s ease',
         '&:hover': {
             background: '#1523CB',
+            borderColor: 'transparent',
             color: '#FAFAFA'
         },
         '& $button--secondary': {},
@@ -33,6 +34,11 @@ const useStyles = createUseStyles({
         background: 'transparent !important',
         border: 'none',
         borderRadius: 0,
+        '& button--light' : {
+            '&:hover': {
+                boxShadow: '0 3px 0 0 #FAFAFA !important',
+            }
+        },
         '&:hover': {
             boxShadow: '0 3px 0 0 #333439',
             color: '#333439',
@@ -41,7 +47,7 @@ const useStyles = createUseStyles({
     'button--light': {
         color: '#FAFAFA',
         '&:hover': {
-            boxShadow: '0 3px 0 0 #FAFAFA',
+            borderColor: 'transparent',
             color: '#FAFAFA'
         },
     },
