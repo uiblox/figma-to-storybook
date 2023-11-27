@@ -13,31 +13,36 @@ interface AlarmCardProps {
 
 const useStyles = createUseStyles({
     'alarm-container' : {
+        alignItems: 'center',
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'center',
-        textAlign: 'center',
+        fontFamily: 'Josefin Sans, sans-serif',
         height: '100%',
-        justifyContent: 'space-evenly'
+        justifyContent: 'center',
+        textAlign: 'center',
     },
     'alarm-icon': {
-        fontSize: '32px'
+        fontSize: '32px',
+        marginBottom: '12px'
     },
     'alarm-content': {
-        color: '#333439'
+        color: '#333439',
+        marginBottom: '20px'
     },
     'alarm-label': {
         fontSize: '24px',
+        fontWeight: '600',
         marginBottom: '12px',
     },
     'alarm-msg': {
-        fontSize: '14px'
+        fontSize: '14px',
+        fontWeight: '100',
     },
     'alarm-actions': {
         display: 'flex',
         flexDirection: 'column',
         '& *:first-of-type': {
-            marginBottom: '10px'
+            marginBottom: '8px'
         }
         
     }
@@ -79,8 +84,8 @@ export const AlarmCard: React.FC<AlarmCardProps> = ({label, msg, type, handleCar
                     </div>
                 </div>
                 <div className={styles['alarm-actions']}>
-                    <Button handleClick={handleCardClick} label='Confirm'/>
-                    <Button handleClick={handleCardClick} label='Dismiss' type="secondary"/>
+                    <Button handleClick={handleCardClick} label='Confirm' mode="dark" type="primary" />
+                    <Button handleClick={handleCardClick} label='Dismiss' mode="dark" type="secondary"/>
                 </div>
             </div>
         </Card>
