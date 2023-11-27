@@ -1,18 +1,11 @@
 import { useStyles } from './css/global'
-import { EditorialCard } from './components/editorialCard/EditorialCard';
 import { Card } from './components/card/Card'
+import { EditorialCard } from './components/editorialCard/EditorialCard';
+import { EditorialCardGroup } from './components/editorialCardGroup/EditorialCardGroup';
 import { HeroEditorial } from './components/heroEditorial/HeroEditorial';
-// import { AlarmTile } from './components/alarmTile/AlarmTile';
+import { AlarmCard } from './components/alarmCard/AlarmCard';
 
 function App() {
-
-  const handleClick = () => {
-    console.log('clicked')
-  }
-
-  const handleCardConfirmClick = () => {
-    console.log('Some function passed from the parent - card confirm click confirmed.')
-  }
 
   const styles = useStyles()
 
@@ -25,51 +18,20 @@ function App() {
         <EditorialCard />
       </div>
       <div className={styles.section}>
+        <AlarmCard type='success' label="Lorem ipsum" msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+        <AlarmCard type='warn' label="Lorem ipsum" msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+        <AlarmCard type='error' label="Lorem ipsum" msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+        <AlarmCard type='info' label="Lorem ipsum" msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
+      </div>
+      <div className={styles.section}>
+        <EditorialCardGroup />
+      </div>
+      <div className={styles.section}>
         <HeroEditorial/>
       </div>
       <div className={styles.section}>
         <HeroEditorial reverse={true}/>
       </div>
-
-      {/* <div className={styles.section}>
-        <AlarmTile msg='Card description goes here' handleCardConfirmClick={handleCardConfirmClick}/>
-      </div> */}
-      {/* <div className={styles.section}>
-      <Button handleClick={handleClick} label="Learn more" size='sm'>
-          <InfoCircleOutlined/>
-        </Button>
-        <Button handleClick={handleClick} label="Learn more">
-          <InfoCircleOutlined/>
-        </Button>
-        <Button handleClick={handleClick} label="Learn more" size='lg'>
-          <InfoCircleOutlined/>
-        </Button>
-        <Button handleClick={handleClick} label="Learn more" size='sm'></Button>
-        <Button handleClick={handleClick} label="Learn more"></Button>
-        <Button handleClick={handleClick} label="Learn more" size='lg'></Button>
-      </div> */}
-      {/* <div className={styles.section}>
-        <Button handleClick={handleClick} label="Learn more" size='sm' type='secondary'>
-          <InfoCircleOutlined/>
-        </Button>
-        <Button handleClick={handleClick} label="Learn more" type='secondary'>
-          <InfoCircleOutlined/>
-        </Button>
-        <Button handleClick={handleClick} label="Learn more" size='lg' type='secondary'>
-          <InfoCircleOutlined/>
-        </Button>
-      </div> */}
-      {/* <div className={styles.section}>
-        <Button handleClick={handleClick} label="Learn more" size='sm' type='secondary'></Button>
-        <Button handleClick={handleClick} label="Learn more" type='secondary'></Button>
-        <Button handleClick={handleClick} label="Learn more" size='lg' type='secondary'></Button>
-      </div> */}
-      {/* <div className={styles.section}>
-        <Card msg='Card description goes here' handleCardConfirmClick={handleCardConfirmClick} />
-        <Card label='Success' msg='Card description goes here' type='success' handleCardConfirmClick={handleCardConfirmClick}/>
-        <Card label='Warning' msg='Card description goes here' type='warn' handleCardConfirmClick={handleCardConfirmClick}/>
-        <Card label='Error' msg='Card description goes here' type='error' handleCardConfirmClick={handleCardConfirmClick}/>
-      </div> */}
     </>
   )
 }
