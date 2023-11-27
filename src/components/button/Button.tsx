@@ -12,6 +12,7 @@ interface ButtonProps {
 const useStyles = createUseStyles({
     'button': {
         cursor: 'pointer',
+        fontFamily: 'Josefin Sans, sans-serif',
         fontSize: '14px',
         padding: '8px 12px',
         transition: '0.4s ease',
