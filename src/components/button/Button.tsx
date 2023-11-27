@@ -4,53 +4,62 @@ import { ReactNode } from 'react';
 interface ButtonProps {
     children?: ReactNode
     label?: string
-    mode?: 'light'
-    type?: 'secondary'
+    mode: 'dark' | 'light'
+    type: 'primary' | 'secondary'
     handleClick: () => void
 }
 
 const useStyles = createUseStyles({
     'button': {
-        background: 'transparent',
-        border: '1.5px solid',
-        borderRadius: '4px',
-        color: '#333439',
         cursor: 'pointer',
         fontSize: '14px',
         padding: '8px 12px',
         transition: '0.4s ease',
+        '& $button--dark': {},
+        '& $button--light': {},
+        '& $button--secondary': {},
+        
+    },
+    'button-content': {
+        whiteSpace: 'nowrap'
+    },
+    'button--dark': {
+        color: '#333439',
         '&:hover': {
             background: '#1523CB',
             borderColor: 'transparent',
             color: '#FAFAFA'
         },
-        '& $button--secondary': {},
-        '& $button--light': {},
+        '& $button--secondary': {}
     },
-    'button-content': {
-        whiteSpace: 'nowrap'
+    'button--light': {
+        color: '#FAFAFA',
+        '&:hover': {
+            background: '#1523CB',
+            borderColor: 'transparent',
+            color: '#FAFAFA'
+        },
+        '& $button--secondary': {}
+    },
+    'button--primary': {
+        background: 'transparent',
+        border: '1.5px solid',
+        borderRadius: '4px',
     },
     'button--secondary': {
         background: 'transparent !important',
         border: 'none',
         borderRadius: 0,
-        '& button--light' : {
+        '&:not($button--light)': {
             '&:hover': {
-                boxShadow: '0 3px 0 0 #FAFAFA !important',
-            }
+                boxShadow: '0 3px 0 0 #333439',
+                color: '#333439',
+            },
         },
         '&:hover': {
-            boxShadow: '0 3px 0 0 #333439',
-            color: '#333439',
-        },
-    },
-    'button--light': {
-        color: '#FAFAFA',
-        '&:hover': {
-            borderColor: 'transparent',
-            color: '#FAFAFA'
-        },
-    },
+            boxShadow: '0 3px 0 0 #FAFAFA',
+        }
+    },   
     'button-text': {
         paddingLeft: 0,
         textWrap: 'nowrap',
