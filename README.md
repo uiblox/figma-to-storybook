@@ -22,7 +22,8 @@
 | ------ | ------ |
 | Alarm Card | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-alarmcard--docs)| 
 | Button | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-button--docs)| 
-| HeroEditorial | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-heroeditorial--docs)| 
+| Hero Editorial | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-heroeditorial--docs)| 
+| Editorial Card Group | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-editorialcardgroup--three-card)| 
 
 <br/>
 <br/>
