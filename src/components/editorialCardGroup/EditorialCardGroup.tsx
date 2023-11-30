@@ -1,6 +1,10 @@
 import { EditorialCard } from "../editorialCard/EditorialCard"
 import { createUseStyles } from "react-jss"
 
+interface EditorialCardGroupProps {
+    cards: 2 | 3 | 4
+}
+
 const useStyles = createUseStyles({
     'editorial-card-group': {
         display: 'flex',
@@ -33,16 +37,19 @@ const useStyles = createUseStyles({
     }
 })
 
-export const EditorialCardGroup = () => {
+export const EditorialCardGroup: React.FC<EditorialCardGroupProps> = ({cards}) => {
     const styles = useStyles()
     
-    
+    const generateCards = (count: number) => {
+        const content = []
+        for (let i = 0; i < count; i++) {
+            content.push(<EditorialCard />)
+        }
+        return content
+    }
     return (
         <div className={styles['editorial-card-group']}>
-            <EditorialCard />
-            <EditorialCard />
-            <EditorialCard />
-            <EditorialCard />
+           {generateCards(cards)}  
         </div>
     )
 }

@@ -24,7 +24,7 @@ function App() {
         <AlarmCard type='info' label="Lorem ipsum" msg="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
       </div>
       <div className={styles.section}>
-        <EditorialCardGroup />
+        <EditorialCardGroup cards={4}/>
       </div>
       <div className={styles.section}>
         <HeroEditorial/>
