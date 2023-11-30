@@ -1,7 +1,7 @@
 # Figma to Storybook
 
 
-<img src="README_assets/intro-1.png" alt="Graphic explaining the purpose of this project part I" />
+<img src="README_assets/intro-1.jpg" alt="Graphic explaining the purpose of this project part I" />
 
 | Figma Section | Link |
 | ------ | ------ |
@@ -16,7 +16,7 @@
 <br/>
 <br/>
 
-<img src="README_assets/intro-2.png" alt="Graphic explaining the purpose of this project part II" />
+<img src="README_assets/intro-2.jpg" alt="Graphic explaining the purpose of this project part II" />
 
 | Storybook Section | Link |
 | ------ | ------ |
@@ -28,4 +28,4 @@
 <br/>
 <br/>
 
-<img src="README_assets/intro-3.png" alt="Graphic explaining the purpose of this project part III" />
+<img src="README_assets/intro-3.jpg" alt="Graphic explaining the purpose of this project part III" />
