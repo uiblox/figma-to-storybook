@@ -5,9 +5,6 @@ const meta: Meta<typeof HeroEditorial> = {
     title: 'Components/HeroEditorial',
     component: HeroEditorial,
     parameters: {
-        viewport: {
-            defaultViewport: 'desktopXL',
-        },
         layout: 'centered'
     },
     tags: ['autodocs'],
