@@ -43,7 +43,7 @@ export const EditorialCardGroup: React.FC<EditorialCardGroupProps> = ({cards}) =
     const generateCards = (count: number) => {
         const content = []
         for (let i = 0; i < count; i++) {
-            content.push(<EditorialCard />)
+            content.push(<EditorialCard key={`card${i}`}/>)
         }
         return content
     }
