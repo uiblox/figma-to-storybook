@@ -12,10 +12,10 @@ Components have been created with React.
 
 | Storybook Section    | Link                                                                                                                   |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Alarm Card           | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-alarmcard--docs)                |
-| Button               | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-button--docs)                   |
-| Hero Editorial       | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-heroeditorial--docs)            |
-| Editorial Card Group | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-editorialcardgroup--three-card) |
+| Alarm Card           | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-alarmcard--docs)                |
+| Button               | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-button--docs)                   |
+| Editorial Card Group | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-editorialcardgroup--docs)       |
+| Hero Editorial       | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-heroeditorial--docs) |
 
 ### More about the project
 
@@ -40,10 +40,10 @@ The following graphics help explain Atomic design and provide some context to th
 
 | Storybook Section    | Link                                                                                                                   |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Alarm Card           | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-alarmcard--docs)                |
-| Button               | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-button--docs)                   |
-| Hero Editorial       | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-heroeditorial--docs)            |
-| Editorial Card Group | [Storybook](https://bournecreative.github.io/figma-to-storybook/?path=/docs/components-editorialcardgroup--three-card) |
+| Alarm Card           | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-alarmcard--docs)                |
+| Button               | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-button--docs)                   |
+| Editorial Card Group | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-editorialcardgroup--docs)       |
+| Hero Editorial       | [Storybook](https://uiblox.github.io/figma-to-storybook/?path=/docs/components-heroeditorial--docs)            |
 
 <br/>
 <br/>
